@@ -58,8 +58,8 @@ class _HomePageState extends State<HomePage> {
       await HomeWidget.saveWidgetData<int>('counter', _counter);
       await HomeWidget.saveWidgetData<String>('message', _messageController.text);
       await HomeWidget.updateWidget(
-        name: 'MyWidget',
         iOSName: 'MyWidget',
+        androidName: 'MyAppWidget',
       );
       
       ScaffoldMessenger.of(context).showSnackBar(
