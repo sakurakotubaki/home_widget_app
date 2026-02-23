@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
         iOSName: 'MyWidget',
         androidName: 'MyAppWidget',
       );
-      
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('ウィジェットを更新しました')),
       );
